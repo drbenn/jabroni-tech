@@ -49,7 +49,7 @@ const Bento = () => {
           title={item.title}
           bgUrl={item.bgUrl}
           span={item.span}
-          delay={index * 0.025}
+          delay={index * 0.05}
         />
       ))}
     </main>
@@ -68,8 +68,8 @@ const GridItem = ({ title, bgUrl, span, delay }) => {
       className={`relative cursor-pointer h-48 rounded bg-center bg-no-repeat bg-cover ${span}`}
       style={{ backgroundImage: `url(${bgUrl})` }}
       initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ delay, duration: 0.5 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ delay, duration: 0.75 }}
     >
       <div className='flex items-center justify-center absolute w-full h-full bg-purple-transparent'>
         {title}

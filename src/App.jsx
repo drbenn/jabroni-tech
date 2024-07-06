@@ -1,8 +1,9 @@
 import './App.css'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Hero from "./components/Hero";
 import Bento from "./components/Bento";
 import SplashAnimation from './components/SplashAnimation'
+import StickyVideo from './components/StickyVideo';
 
 function App() {
   const [isSplashAnimationState, isSplashAnimationSetState] = useState(false);
@@ -10,6 +11,19 @@ function App() {
   setTimeout(() => {
     isSplashAnimationSetState(false);
   }, 1000)
+
+  // const videoRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // // const [volume, setVolume] = useState(1);
+
+  // const handlePlayPause = () => {
+  //   if (isPlaying) {
+  //     videoRef.current.pause();
+  //   } else {
+  //     videoRef.current.play();
+  //   }
+  //   setIsPlaying(!isPlaying);
+  // };
 
 
   return (
@@ -22,6 +36,7 @@ function App() {
 
       <Hero />
       <Bento />
+      <StickyVideo />
     </main>
 
     
